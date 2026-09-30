@@ -46,14 +46,21 @@ Completed:
 - Confirmed expected years and columns
 - Recorded the raw row count
 - Reviewed expected data types for all source columns
+- Loaded the baseline Excel extract with Python and pandas
+- Profiled null counts and null percentages across all 12 source columns
+- Confirmed 0 pandas-recognized null values and 0.0% nulls across all 12 source columns
 
 Current phase:
 
 **Raw data profiling**
 
-Next step:
+Latest completed step:
 
-**Profile missing and null values before beginning data cleaning.**
+**Missing/null value profiling completed in Python.**
+
+Result: all 12 source columns returned a null count of 0 and a null percentage of 0.0%.
+
+The profiling script is available at `src/check_raw_data.py`.
 
 ## Planned Pipeline
 
