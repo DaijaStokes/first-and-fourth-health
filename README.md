@@ -62,6 +62,25 @@ Result: all 12 source columns returned a null count of 0 and a null percentage o
 
 The profiling script is available at `src/check_raw_data.py`.
 
+### Duplicate and Grain Validation
+
+Duplicate profiling was completed in Python.
+
+Results:
+
+- Exact duplicate rows across all 12 source columns: 0
+- Duplicate rows across the proposed five-field business key: 0
+
+The validated grain is one row per unique combination of:
+
+- Year
+- Mother's Single Race
+- Age of Mother 10
+- OE Gestational Age Weekly
+- Infant Birth Weight 12
+
+This confirms that each five-field combination appears only once in the current raw extract. The `Births` field represents the number of births associated with that unique combination.
+
 ## Planned Pipeline
 
 ```text
