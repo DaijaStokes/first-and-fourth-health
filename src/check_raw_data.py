@@ -23,3 +23,11 @@ print(
         ]
     ).sum()
 )
+print(df["Mother's Single Race"].unique())
+print(df["Mother's Single Race"].value_counts())
+print(
+    df.groupby("Mother's Single Race")["Births"]
+    .sum()
+    .reset_index(name="Total Births")
+)
+print(df["Births"].sum())

@@ -81,6 +81,29 @@ The validated grain is one row per unique combination of:
 
 This confirms that each five-field combination appears only once in the current raw extract. The `Births` field represents the number of births associated with that unique combination.
 
+### Categorical Value Profiling — Maternal Race
+
+Initial categorical profiling was completed in Python using pandas.
+
+Completed checks:
+- Identified 6 distinct categories in Mother's Single Race.
+- Reviewed the category values for obvious inconsistencies.
+- Used value_counts() to calculate row frequency by race.
+- Used groupby() and sum() to calculate total births by race.
+- Confirmed 18,122,672 total births across the raw extract.
+
+Key finding:
+Row counts and birth totals represent different measures.
+Each row represents one unique five-field combination,
+while the Births column contains the number of births
+associated with that combination.
+
+Next step:
+Calculate the percentage of total births represented
+by each maternal race category.
+
+Status: Maternal race profiling in progress.
+
 ## Planned Pipeline
 
 ```text
